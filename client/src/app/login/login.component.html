@@ -1,0 +1,39 @@
+<div class="panel panel-info panel_main">
+        <div class="panel-heading panel_head">
+            <div class="panel-title">Sign In</div>
+        </div>
+    
+        <div style="padding-top:30px" class="panel-body">
+            <div class="sign_in">
+                <form class="form-signin" #f="ngForm" 
+                (ngSubmit)="signIn(f.value)">
+    
+                    <div *ngIf="invalidLogin" 
+                        class="alert alert-danger">
+                    Invalid username and/or password.
+                    </div>
+    
+                    <label for="inputEmail" class="sr-only">User name</label>
+                    <input type="email" id="inputEmail" name="email" 
+                    ngModel class="form-control user_name"
+                    placeholder="User Name" required autofocus>
+    
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" id="inputPassword" 
+                    name="password" ngModel class="form-control user_pwd" 
+                    placeholder="Password" required>
+    
+                    <button class="btn btn-lg btn-primary btn-block submit_btn" 
+                    type="submit">Sign in</button>
+                    
+                    
+                    <div>
+                            <a  class="btn back_link"
+                            [routerLink]="['/edit']">
+                           Guest User 
+                       </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

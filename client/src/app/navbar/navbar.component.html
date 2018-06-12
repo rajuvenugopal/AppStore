@@ -1,0 +1,92 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapse" data-toggle="collapse" 
+          data-target="#navbar" 
+           aria-expanded="false" aria-controls="navbar" id="menu-toggle">
+
+           <!-- *ngIf="authService.isLoggedIn()" -->
+
+          <span class="	glyphicon glyphicon-menu-hamburger" aria-hidden="true">
+          </span>
+          </button>
+          
+        
+          <a  [routerLink]="['/edit']"  class="navbar-brand " id="cgicolor">
+              
+               <img class="cgilogo" src="../assets/cgilogo.png"/>
+
+
+               <span class="innovation">
+                Innovation
+                <br>
+                     centre
+               </span>
+          </a>
+          
+
+     
+      </div>
+      <div id="navbars" class="navbar-collapse collapse">
+            <div *ngIf="authService.isLoggedIn()" class="logout">
+                    <a (click)="authService.logout()" 
+                    routerLink="/login">
+                        Logout
+                    </a>
+            </div>
+
+            <!-- <div *ngIf="!authService.isLoggedIn()" class="logout">
+                    <a (click)="authService.logout()" 
+                    routerLink="/login">
+                        Login
+                    </a>
+            </div> -->
+        
+          <!-- User login button start -->
+         <div class="user_login">
+              
+              <div class="dropdown">
+                    
+
+                  <div class="dropbtn"  *ngIf="authService.isLoggedIn()">
+                      <a>
+                          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                      </a>
+                  </div>
+                  <ul class="dropdown-content">
+                      <!-- <li routerLink="/login" *ngIf="!authService.isLoggedIn()">
+                          <a ></a>Login
+                      </li> -->
+
+                      <li *ngIf="authService.isLoggedIn()" 
+                      [routerLink]="['/add-app']">
+                          <a >Edit Mode</a>
+                          
+                      </li>
+                      <!-- <li *ngIf="authService.isLoggedIn()">
+                          <a >My Contribution</a>
+                      </li> -->
+
+                      <!-- <li *ngIf="authService.isLoggedIn()">
+                          <a [routerLink]="['/edit']">Switch to Demo</a>
+                      </li> -->
+                      
+                      <!-- <li *ngIf="authService.isLoggedIn()">
+                          <a (click)="authService.logout()" routerLink="/edit">
+                              Logout
+                          </a>
+                      </li> -->
+                  </ul>
+              </div>
+          
+         
+
+
+             
+          </div>
+
+         <!-- User login button ends -->
+      </div>
+      
+  </div>
+</nav>

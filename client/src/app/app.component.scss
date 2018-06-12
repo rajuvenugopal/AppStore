@@ -1,0 +1,230 @@
+@import '../_variables.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i');
+
+
+html{
+    height:100%;
+}
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif !important;
+    background-color: #f6f6f6 !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+}
+#wrapper{
+    font-family: 'Roboto', sans-serif !important;
+    background-color: #f6f6f6 !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+    height: 100%;
+    
+}
+
+.row {
+     margin-left: 0px !important;
+     margin-right: 0px !important; 
+}
+#flexbox{
+    display: flex;    
+    height: 163px;
+    justify-content: space-evenly;
+
+}
+.fa-th{
+     color:#C71630 !important;
+}
+.fa{
+    color:#C9C9C9;
+}
+
+.buttonsspaces{
+     display: flex;  
+       
+
+}
+.fontcolor{
+    font-size:20px; 
+    color:red;
+ border-radius: 15px;
+   border-color:black;
+}
+p{
+ color:#fff;
+font-size:14px; 
+float:right;  
+}
+
+
+
+
+
+
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+#cgicolor{
+       color: #E31937;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 30px;
+
+}
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    padding: 15px;
+    width: 100%;
+    margin-top: 70px;
+  
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;   
+}
+
+
+@media (min-width: 768px) {
+    .bodycolor{
+        min-height: 636px;
+        position: relative;
+    }
+    #wrapper {
+       
+        transition: none !important;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+        transition: none !important;
+        
+    }
+.collapse.in #sidebar-wrapper{
+    display: block;
+}
+    #sidebar-wrapper {
+        width: 250px !important;
+        position: fixed;
+        height: 100%;
+        display: none;
+        background-color: #fff;
+        z-index: 999;
+        margin: 0 -15px;
+        margin-top: 70px;
+        padding:20px 10px;
+        border-top:1px solid #d5203b ;
+        box-shadow: 0px 0px 2px #ccc;
+        transition: none !important;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px 20px 30px 20px;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+
+    // Accordion coding
+
+    // .accordion2>li>a,
+    .accordion1>.first_accordian>.business{
+        text-decoration: none;
+        color: #333333 ;
+    }
+
+    // .accordion2>li:hover,
+    // .accordion2>li:hover{
+    //     background-color: transparent;
+    // }
+
+    .business_list>li>a, 
+    .category_list>li>a{
+        padding-left: 10px;
+        text-decoration: none;
+        color: #333333;
+        
+    }
+    .business_list>li,
+    .category_list>li{
+        list-style: none;
+        margin: 10px 0;
+        padding: 5px 0;
+    }
+
+    .industry,
+    .categories{
+        color: #333333;
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-top: 20px;
+    }
+    .industry:hover,
+    .industry:active,
+    .industry:focus,
+    .categories:hover,
+    .categories:active,
+    .categories:focus{
+background-color: transparent;
+    }
+
+    .industry>i,
+    .categories>i{
+        padding-right: 37px;
+        font-size: 13px;
+        float: right;
+        color: #666666;
+        position: relative;
+        top: 7px;
+        transition: all 1s ease;
+    }
+
+    .industry>i:active,
+    .industry>i:focus{
+        transform: scale(1) rotate(180deg) ;
+    }
+
+    .industry:hover,
+    .categories:hover{
+        background-color: transparent;
+    }
+
+    .business_list>li:hover,
+    .category_list>li:hover{
+        // background-color: #E11937 ;
+        // color: white;
+    
+    }
+}
+
+// li a:hover {
+//     background-color: #E11937 ;
+//     color: white;
+// }
+
+
+@media(min-width){
+ #navbar{
+        position: absolute;
+    }
+}

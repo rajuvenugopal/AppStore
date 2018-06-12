@@ -1,0 +1,21 @@
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #666;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-weight: normal;
+    font-size: 12px;
+   
+}
+.copyright a{
+    text-decoration: none;
+    color:#fff;
+}
+.copyright a:hover{
+    text-decoration: underline;
+    color:#fff;
+}

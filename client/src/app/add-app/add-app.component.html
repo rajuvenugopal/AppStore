@@ -1,0 +1,67 @@
+<div class="row">
+    <a [routerLink]="['/edit']"><h4 class="back_btn">
+              < Back</h4></a>
+      
+</div>
+<div class="container app_add"> 
+
+    <div class="col-md-12 buttonsspaces">
+        
+                              
+                        <button class="btn btn-danger" [class.active]="filterBy==='dashboard'" (click)="filterBy('dashboard')" id="dashboard">
+                            Dashboard <span class="countdb">(8)</span>
+                        </button>
+                        <button class="btn btn-default" [class.active]="filterBy==='Latest'" (click)="filterBy('Latest')" id="added">
+                            Latest Additions <span class="countdb">(6)</span>
+                        </button>
+                        <button class="btn btn-default" [class.active]="filterBy==='visited'" (click)="filterBy('visited')" id="Visited">
+                            Recently visited <span class="countdb">(6)</span>
+                        </button>
+        
+                        <button class="btn btn-default" [class.active]="filterBy==='all'" (click)="filterBy('all')" id="All">
+                            All <span class="countdb">(6)</span>
+                        </button>
+        
+                    </div>
+
+  <div class="col-md-12">
+    <div class="col-md-3 add_app" routerLink="/add-product">
+      <a class="add_symbol">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <!-- Details of all apps start -->
+
+    <div *ngFor="let item of filteredproducts" class="text-center">
+        
+                                <a [routerLink]="['/demo', item.id]">
+                                    <div class="col-md-3 border card_body ">
+                                        <div class="card_block">
+        
+                                            <div class="img_app">
+                                                <img [src]="item.logo.value" class="img-responsive">
+                                            </div>
+        
+                                            <div class="card_content">
+                                                <!-- <a [routerLink]="['/demo', item.id]"> -->
+                                                <h5 class="card-title">{{item.name}}</h5>
+                                                <!-- </a> -->
+                                                <p class="card-text"> {{item.description}}</p> 
+        
+                                            </div>
+                                            <!-- <b>
+                                                    <u>Connect IT</u> -->
+                                        </div>
+        
+                                    </div>
+        
+                                </a>
+                                <!-- </b> -->
+        
+                            </div>
+
+    <!-- Details of all apps end -->
+
+  </div>
+</div>

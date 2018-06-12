@@ -1,0 +1,128 @@
+
+
+/* css for deatil page */
+@media (min-width:1200px){
+
+.bg-light{
+    padding: 0 50px;
+}
+.back_btn{
+    float: right;
+    color: #e11937;
+   font-size: 18px;
+  
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.demo_url{
+
+}
+.cardborder{
+    width: 100%;
+    height: 300px;
+    margin: 0px 10px 0 0;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.12);
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 20px;
+    position: relative;
+}
+.cardborder img{
+    width:60%;
+    margin:0 auto;
+}
+.cardborder .heading{
+    margin: 15px 0 10px 0;
+    text-align: center;
+    font-size: 19px;
+}
+
+
+/* card text details*/
+.card-text{
+padding: 0px 10px 0 20px;
+text-align: left;
+} 
+.card-text .heading{
+    margin: 0px 0 20px 0;
+    font-size: 30px;
+    font-weight: normal;
+} 
+.card-text .subheading
+{    margin: 0px 0 12px 0;
+    font-size: 16px;
+    font-weight: bold;
+} 
+.card-text .app_desc {
+    margin: 0px 0 15px 0;
+    font-size: 15px;
+    float: none;
+    line-height: 20px;
+}
+.playpresentation
+{
+    font-size: 14px;
+    width: auto;
+    background-color: #fff !important;
+    border-color: #e11937 !important;
+    border-width: 2px;
+    border-radius: 0px !important;
+    padding: 6px 20px;
+    font-weight: bold;
+    color:  #e11937 !important;
+} 
+a.ppt{
+    color: #e11937 !important; 
+}
+.launchdemo
+{
+    font-size: 14px;
+    width: auto;
+    background-color: #e11937 !important;
+    border-color: #e11937 !important;
+    border-radius: 0px !important;
+    padding: 6px 42px;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+.launchdemo>a,
+.launchdemo>a:hover{
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-decoration: none;
+    
+}
+
+.exploremoreitem{
+    margin-top:50px;
+}
+.exploremoreitem .heading{
+    margin: 15px 0 10px 0;
+    text-align: center;
+    font-size: 19px;
+}
+}
+
+
+
+
+#flexbox{
+    display: flex;
+    height: 163px;
+    justify-content: space-evenly;
+}
+
+.fa-th{
+    color:#E11937 !important;
+}
+.fa{
+    color:#E11937;
+}
+.buttonsspaces{
+    display: flex;
+}
+.fontcolor{
+    font-size:20px;
+    color:red;
+    border-radius: 15px;
+    border-color:black;
+}

@@ -1,0 +1,111 @@
+<app-navbar></app-navbar>
+<div id="wrapper" class="toggled">
+    <div class="container-fluid bodycolor">
+
+        <!-- Sidebar -->
+        <div id="navbar">
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav nav nav-pills nav-stacked">
+                    <li class="sidebar-brand">
+
+                    </li>
+
+                    <ul class="nav nav-sidebar" id="accordion1">
+                        <li class="first_accordian"> 
+                            
+                            <a data-toggle="collapse" 
+                            data-parent="#accordion1" 
+                            href="#link1"
+                            class="industry">
+                            Industry Type 
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                            
+                            <ul id="link1" class="collapse business_list">
+
+                                <li>
+                                    <a>
+                                        <input type="checkbox" 
+                                        #query (click)="filter(query.value)" 
+                                        id="query" name="query" value="">
+                                        Finance</a>
+                                </li>
+
+                                <li>
+                                    <a id="subItem">
+                                        <input type="checkbox">Service</a>
+                                </li>
+                                <li>
+                                    <a id="subItem">
+                                        <input type="checkbox">&nbsp;Telecom</a>
+                                </li>
+                                <li>
+                                    <a id="subItem">
+                                        <input type="checkbox">&nbsp;Utilites</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <!-- <li>
+
+    <app-appfilter></app-appfilter>
+              </li> -->
+
+                    </ul>
+                    <ul class="nav nav-sidebar" id="accordion2">
+
+                        <li class=""> 
+                        <a data-toggle="collapse" 
+                            data-parent="#accordion2" 
+                            href="#link2"
+                            class="categories">
+                            Categories
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>   
+                        </a>
+
+                            <ul id="link2" class="collapse category_list">
+
+                                <li>
+                                    <a>
+                                        <input type="checkbox">&nbsp;Finance</a>
+                                </li>
+                                <li>
+                                    <a id="subItem">
+                                        <input type="checkbox">&nbsp;Artificial Intelligence</a>
+                                </li>
+                                <li>
+                                    <a id="subItem">
+                                        <input type="checkbox">&nbsp;Automation</a>
+                                </li>
+                                <li>
+                                    <a id="subItem">
+                                        <input type="checkbox">&nbsp;Block Chain</a>
+                                </li>
+                                <li>
+                                    <a id="subItem">
+                                        <input type="checkbox">&nbsp;Education</a>
+                                </li>
+                                <li>
+                                    <a id="subItem">
+                                        <input type="checkbox">&nbsp;Gamification</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </ul>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+            <router-outlet></router-outlet>
+            <!-- /#page-content-wrapper -->
+
+        </div>
+    </div>
+    <app-footer></app-footer>
+    <!-- /#wrapper -->
+</div>

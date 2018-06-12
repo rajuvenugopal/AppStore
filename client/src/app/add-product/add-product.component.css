@@ -1,0 +1,64 @@
+.add_content{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+   
+}
+.logo::shadow{
+    display: none;
+}
+.logo{
+   
+}
+.back_btn{
+    float: right;
+    color: #C71630;
+    border: 1px solid #c71630;
+    background-color: #fff;
+    padding: 5px 15px;;
+    border-radius: 25px;
+}
+
+.add_logo{
+    width:200px;
+    height: 200px;
+    border: 2px dotted #000;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 22px;
+}
+.fa-plus{
+    position: relative;
+    font-size: 55px;
+    top: 75px;
+}
+
+.add_form .row{
+margin: 0 -15px !important;
+}
+
+.add_form .rows::after{
+    content: "";
+    display: block;
+    clear:both;
+}
+
+.add_form>div{
+    margin-bottom: 10px;
+}
+.market_content{
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0 ;
+}
+.browse::shadow{
+    display: none;
+}
+.browse_btn{
+    background-color: #2bbbad;
+    padding: 7px 43px;
+    color: #fff;
+    border-radius: 5px;
+}

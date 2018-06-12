@@ -1,0 +1,154 @@
+<form class="add_form">
+    <div class="col-md-12">
+        <div class="rows">
+            <p class="add_content">Add Content</p>
+        </div>
+        <div class="row">
+            <a [routerLink]="['/add-app']">
+              <h4 class="back_btn">
+                      < Back
+              </h4></a>
+              
+        </div>
+        <div class="rows">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="logo" class="add_logo">
+                      <span><i class="fa fa-plus" aria-hidden="true"></i>
+                        <br>Add Logo</span></label>
+                    <input type="file" class="form-control" id="logo"
+                     class="logo">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="form-group">
+                    <label for="Name">Name</label>
+                    <input type="text" class="form-control" id="Name" 
+                    placeholder="Enter App Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="Description">Description</label>
+                    <textarea type="password" class="form-control" 
+                    id="Description" placeholder="Description">
+                    </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="meta-data">Meta Data</label>
+                    <input type="text" class="form-control" id="meta-data" 
+                    placeholder="Eg: lot,M2M,etc">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rows">
+           <div class="form-group">
+                <label for="industry">Choose industry</label>
+                <select class="form-control">
+                    
+                  <option>
+                        Telecomm/Communication
+                    </option>
+                    <option>
+                        Finance
+                    </option>
+                    <option>
+                        Utilities
+                    </option>
+                    <option>
+                        Services
+                    </option>
+                </select>
+            </div>
+          </div>
+
+          <div class="rows">
+              <div class="form-group">
+                   <label for="industry">Choose Category</label>
+                   <select class="form-control">
+                       <option>
+                           Artificial Intelligence
+                       </option>
+                       <option>
+                           Finance
+                       </option>
+                       <option>
+                           Automation
+                       </option>
+                       <option>
+                           Block Chain
+                       </option>
+                       <option>
+                          Education
+                      </option>
+                      <option>
+                          Gamification
+                      </option>
+                     </select>
+               </div>
+             </div> 
+        <div class="rows market_content">
+            <div class="form-group">
+                <label for="industry">Marketing Material</label>
+                <select class="form-control">
+                    <option>
+                        Choose Marketing Material
+                    </option>
+                    <option>
+                        PPT Presentation
+                    </option>
+                    <option>
+                        Video
+                    </option>
+                </select>
+                
+                
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                  <div class="col-md-8">
+                      <input type="text" class="form-control  " id="file_path" 
+                      placeholder="File Location">
+                  </div>
+                  <div class="col-md-2">
+                    <div class="form-group">
+                      <label for="industry" class="browse_btn">Browse</label>
+                      <input type="file" class="form-control browse" id="industry" 
+                          placeholder="file location">
+                        </div>
+                  </div>
+                  <div class="col-md-2">
+                      <!-- <input type="submit" class="form-control" 
+                      id="upload" value="upload" style="width:150px"> -->
+                      <button type="" class="btn btn-primary form-control" 
+                      id="upload">Upload</button>
+
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="rows">
+            <div class="form-group">
+                <label for="industry">Demo Url</label>
+                <input type="url" class="form-control" 
+                id="demo_url" placeholder="Demo Url">
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+        <div>
+            <a  class="btn back_link"
+            [routerLink]="['/add-app']">
+            Back
+       </a>
+      </div>
+       
+        <div class="clearfix"></div>
+    </div>
+</form>

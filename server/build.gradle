@@ -1,0 +1,46 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.2.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+apply plugin: 'war'
+
+
+
+group = 'com.apps'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-data-mongodb')	
+	compile('org.springframework.boot:spring-boot-starter-web')				
+	compile('org.springframework.boot:spring-boot-starter-data-rest')		
+	compile('org.springframework.session:spring-session-core')
+	
+	compile('org.glassfish.jersey.containers:jersey-container-servlet')
+	compile('javax.ws.rs:javax.ws.rs-api')
+	
+	
+	
+    compile ('org.codehaus.jackson:jackson-mapper-asl:1.9.13')
+    compile ('org.codehaus.jackson:jackson-core-asl:1.9.13')
+	
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile('org.springframework.security:spring-security-test')
+	
+}

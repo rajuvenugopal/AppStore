@@ -1,0 +1,322 @@
+
+/* css for search bar*/
+@media (min-width:1200px){
+
+    .row.searchbar{
+        background: #e11937;
+        margin: 0 -35px !important;
+        height: 58px;
+        margin-top: -20px !important;
+        line-height: 58px;
+    }
+    .search-text{
+        width: 480px;
+        border-radius: 30px !important;
+        border: 1px solid #8d8d8d;
+        height: 36px;
+        padding: 10px 12px;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.67);
+        box-shadow: none;
+        margin: 10px auto 0 auto;
+        display: block;
+        float: none;
+        position: relative;
+        z-index: 1;
+        padding-left: 50px;
+    }
+    .searchgroup{
+        margin: 0 auto 0 auto;
+    }
+    .search{
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+        width: auto;
+        color: #7f7f7f;
+        font-size: 15px;
+        position: absolute;
+        z-index: 9;
+        top: 12px;
+        left: 2px;
+    }
+    .search:focus{
+        outline: 0;
+    }
+
+
+    /* csss for main-content*/
+    .main-content{
+        padding:35px 0;
+    }
+    .buttonsspaces{
+        display: block;
+        margin: 0 auto 20px auto;
+        float: none;
+        text-align: center;
+    }
+    .buttonsspaces .btn {
+ margin: 0 10px;
+ background-color: #dfdfdf;
+ border-color: #cdcdcd;
+ color:#333333;
+ border-radius: 20px;
+ font-size: 14px;
+ padding: 4px 20px;
+
+    }
+    .buttonsspaces .btn:hover{
+        background-color: #e11937;
+        border-color: #929292;
+        color:#fff;
+    }
+    .buttonsspaces .btn:focus{
+        outline: 0;
+    }
+    .buttonsspaces .btn.active{
+        background-color: #e11937;
+        border-color: #929292;
+        color:#fff;
+    }
+    .countdb{
+        padding-left: 12px;
+    }
+    .bg-light{
+        padding: 0 40px;
+    }
+
+   .login_guest{
+    position: absolute;
+    right: -150px;
+    top: -78px;
+    z-index: 99;
+    border: 1px solid #fff;
+    background-color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+
+   }
+   .login_guest>a,
+   .login_guest>a:hover{
+       color: #333338;
+       text-decoration: none;
+
+   }
+   
+
+    .card_body{
+        width: 21%;
+        height: 200px;
+        margin: 35px 2% 0 2%;
+        box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.12);
+        background-color: #fff;
+        border-radius: 3px;
+        padding: 20px;
+        position: relative;
+    }
+    .img_app img{
+        width: 70px;
+        height: 70px;
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%)
+    }
+    .card_content{
+        display: none;
+    }
+
+    .card-title{
+        display: block !important;
+    }
+    .card_body:hover{
+        box-shadow: 0px 0px 22px 1px rgba(0, 0, 0, 0.42);
+    }
+    .card_body:hover .card_content{
+        display: block;
+        border-radius: 3px;
+        background-color: rgb(225, 25, 55);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        margin: -20px;
+        padding:40px 20px 20px 20px;
+        text-align: center;
+
+    }
+    .card-title{
+ font-size: 17px;
+ font-weight: 600;
+ color:#fff;
+ margin:10px;letter-spacing: 1px;
+    }
+
+
+    .card_body:hover .card_display{
+        display: none;
+    }
+
+    .card_display{
+        position: relative;
+        text-align: center;
+        bottom: -120px;
+        color: #333333;
+        letter-spacing: 1px;
+    }
+    .card_title_vis{
+        color: #333333;
+        font-size: 16px;
+    }
+    .card-text{
+        font-size: 14px;
+        float: none;
+        letter-spacing: 1px;
+        font-weight: 400;
+        color:#fff;
+        margin:10px;
+    }
+
+      
+/* details view*/
+
+
+.card_body{
+    width: 21%;
+    height: 200px;
+    margin: 35px 2% 0 2%;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.12);
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 20px;
+    position: relative;
+}
+.card_content{
+    display: none;
+}
+
+
+
+.style1 .card_body:hover{
+    box-shadow: 0px 0px 22px 1px rgba(0, 0, 0, 0.42);
+}
+.style1 .card_body:hover .card_content{
+    display: block;
+    border-radius: 3px;
+    background-color: rgb(225, 25, 55);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: -20px;
+    padding:40px 20px 20px 20px;
+    text-align: center;
+
+}
+.card-title{
+font-size: 17px;
+font-weight: 600;
+color:#fff;
+margin:10px;letter-spacing: 1px;
+}
+.card-text{
+    font-size: 14px;
+    float: none;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color:#fff;
+    margin:10px;
+}
+.img_app img{
+    width: 70px;
+    height: 70px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+
+/* details view*/
+
+
+/* list  view*/
+
+
+.style2 .card_body{
+width: 100%;
+height: auto;
+margin: 1px 4% -2px 2%;
+border-top: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-shadow: none;
+background-color: transparent;
+border-radius: 0;
+padding: 20px;
+position: relative;
+}
+.style2 .card_block:after{
+content:'';
+display: block;
+clear:both;
+}
+.style2 .img_app{
+float:left;
+width:100px;
+}
+.style2 .card_content{
+    float:right;
+width:calc(100% - 100px);
+display: block;
+text-align: left;
+}
+.style2 .img_app img{
+    width:100px;
+    height: 100px;
+    display: block;
+    margin: 0;
+    position: relative;
+    top:0%;
+    left: 0%;
+    transform: translate(0%,0%)
+}
+
+.style2  .card_body:hover{
+    box-shadow:none;
+}
+
+.style2 .card-title{
+font-size: 20px;
+font-weight: 600;
+color:#333;
+margin:0 10px 12px 10px;letter-spacing: .5px;
+}
+.style2 .card-text{
+    font-size: 14px;
+    float: none;
+    letter-spacing: .5px;
+    font-weight: 400;
+    color:#333;
+    margin:10px;
+}
+
+.listtype{
+    font-size: 18px;
+    position: absolute;
+    right: 70px;
+    top: 95px;
+}
+.listtype>button,
+.listtype>button:active,
+.listtype>button:focus {
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+}
+
+
+
+
+
