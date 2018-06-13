@@ -3,7 +3,7 @@
 @media (min-width:1200px){
 
     .row.searchbar{
-        background: #e11937;
+        background: #e11836;
         margin: 0 -35px !important;
         height: 58px;
         margin-top: -20px !important;
@@ -49,6 +49,7 @@
     .main-content{
         padding:35px 0;
     }
+
     .buttonsspaces{
         display: block;
         margin: 0 auto 20px auto;
@@ -56,17 +57,17 @@
         text-align: center;
     }
     .buttonsspaces .btn {
- margin: 0 10px;
- background-color: #dfdfdf;
- border-color: #cdcdcd;
- color:#333333;
- border-radius: 20px;
- font-size: 14px;
- padding: 4px 20px;
+margin: 0 10px;
+background-color: #dfdfdf;
+border-color: #cdcdcd;
+color:#333333;
+border-radius: 20px;
+font-size: 14px;
+padding: 4px 20px;
 
     }
     .buttonsspaces .btn:hover{
-        background-color: #e11937;
+        background-color: #e11836;
         border-color: #929292;
         color:#fff;
     }
@@ -74,7 +75,7 @@
         outline: 0;
     }
     .buttonsspaces .btn.active{
-        background-color: #e11937;
+        background-color: #e11836;
         border-color: #929292;
         color:#fff;
     }
@@ -87,11 +88,11 @@
 
    .login_guest{
     position: absolute;
-    right: -150px;
-    top: -78px;
-    z-index: 99;
+    right: -170px;
+    top: -145px;
+    z-index: 2;
     border: 1px solid #fff;
-    background-color: #fff;
+    background-color: #e11836;
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 14px;
@@ -99,7 +100,7 @@
    }
    .login_guest>a,
    .login_guest>a:hover{
-       color: #333338;
+       color: #fff;
        text-decoration: none;
 
    }
@@ -199,10 +200,10 @@
 
 
 
-.style1 .card_body:hover{
+ .card_body:hover{
     box-shadow: 0px 0px 22px 1px rgba(0, 0, 0, 0.42);
 }
-.style1 .card_body:hover .card_content{
+ .card_body:hover .card_content{
     display: block;
     border-radius: 3px;
     background-color: rgb(225, 25, 55);
@@ -234,9 +235,20 @@ margin:10px;letter-spacing: 1px;
     display: block;
     margin: 0 auto;
     position: absolute;
-    top:50%;
+    top:40%;
     left: 50%;
     transform: translate(-50%,-50%)
+}
+.img_app .card-title{
+    font-size: 17px;
+    font-weight: 600;
+    color: #000;
+    margin: 10px;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: 18px;
+    width: 73%;
+    text-align: center;
 }
 
 /* details view*/
@@ -263,28 +275,83 @@ display: block;
 clear:both;
 }
 .style2 .img_app{
-float:left;
-width:100px;
+    float: left;
+    width: 75px;
+    height: 75px;
+    background-color: #fff;
+    
+    padding: 10px;
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 0px 0px 13px rgba(128, 128, 128, 0.38);
 }
 .style2 .card_content{
     float:right;
-width:calc(100% - 100px);
-display: block;
-text-align: left;
+width:calc(100% - 150px);
+display: block;    
+height: 85px;
+text-align: left; 
+left: -47px;
+position: relative;
 }
 .style2 .img_app img{
-    width:100px;
-    height: 100px;
+   width:  70px;
+    height: 70px;
     display: block;
-    margin: 0;
-    position: relative;
-    top:0%;
-    left: 0%;
-    transform: translate(0%,0%)
+    margin: 0 auto;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
 }
-
+.arrow{
+    height: auto;
+    float: right;
+    position: relative;
+    top: -38px;
+}
+.arrow i{
+    font-size: 18px;
+    -webkit-transition:  2s; /* Safari */
+    transition:  2s;
+    color: #e11836;
+}
+.style2 .card_body:hover .arrow i{
+    padding-left:10px;
+   
+    animation: slide1 1s ease-in-out infinite;
+    margin-left: 10px;
+   
+}
+@keyframes slide1 {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+  
+    50% {
+      transform: translate(10px, 0);
+    }
+  }
+  
 .style2  .card_body:hover{
     box-shadow:none;
+}
+.style2  .card_body:hover .card_content{
+    float: right;
+    width: calc(100% - 150px);
+    display: block;
+    text-align: left;
+   
+    border-radius: 0px;
+    background-color: transparent;
+  
+    height: 100%;
+    position: relative;
+    margin:0px;
+    padding:0px;
+   
+
 }
 
 .style2 .card-title{
@@ -313,6 +380,23 @@ margin:0 10px 12px 10px;letter-spacing: .5px;
 .listtype>button:focus {
     border: 1px solid transparent;
     background-color: transparent;
+}
+.btn.btn-white{
+    padding: 0;
+}
+.btn.btn-white i{
+    font-size: 22px;
+    padding: 1px 4px;
+}
+.btn.btn-white.active{
+    background-color: transparent;
+    box-shadow: none;
+    color: #e11836;
+}
+
+.btn.btn-white.active:focus,.btn.btn-white.active:hover,
+.btn.btn-white.active:active{
+    outline: 0;
 }
 }
 
