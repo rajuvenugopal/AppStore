@@ -31,7 +31,9 @@
                 id="dashboard">
                     Dashboard <span class="countdb">(8)</span>
                 </button>
-                <button class="btn btn-default" [class.active]="filterBy==='Latest'" (click)="filterBy('Latest')" id="added">
+                <button class="btn btn-default" 
+                [class.active]="filterBy==='Latest'" 
+                (click)="filterBy('Latest')" id="added">
                     Latest Additions <span class="countdb">(6)</span>
                 </button>
                 <button class="btn btn-default" [class.active]="filterBy==='visited'" (click)="filterBy('visited')" id="Visited">
@@ -48,20 +50,25 @@
             <!-- List and Grid view -->
 
             <div class="listtype">
-                    <button (click)="isClass1Visible = !isClass1Visible;"> 
-                        <i class="fa fa-th" aria-hidden="true"></i>
-                    </button> 
-                    <button (click)="isClass2Visible = !isClass2Visible;">
-                        <i class="fa fa-th-list" aria-hidden="true"></i>
-                    </button> 
+
+
+                 <button class="btn btn-white" type="button"(click)="onDisplayModeChange(1)"
+                    [ngClass]="{'btn-primary active': displayMode === 1}" >
+                    <i class="fa fa-th" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-white" type="button"  (click)="onDisplayModeChange(2)"
+                    [ngClass]="{'btn-primary active': displayMode === 2}" >
+                    <i class="fa fa-th-list" aria-hidden="true"></i>
+                </button>
+                    
             </div>
 
 
 
             
         </div>
-        <div [ngClass]="{'style1': isClass1Visible, 'style2': isClass2Visible}">
-        <div class="">
+       
+        <div class="row" *ngIf="displayMode === 1 " >
             <div class="col-lg-12 col-md-12">
 
                 <div class="bg-light" id="" (click)="navigatetodemopage()">
@@ -75,6 +82,7 @@
                                     <div class="img_app">
                                         <img [src]="item.logo.value" 
                                         class="img-responsive">
+                                        <h5 class="card-title">{{item.name}}</h5>
                                     </div>
 
                                     <div class="card_content">
@@ -105,7 +113,56 @@
                 <div class="clearfix"></div>
             </div>
         </div>
+        <div class="row style2" *ngIf="displayMode === 2">
+                <div class="col-lg-12 col-md-12">
+                        
+                                        <div class="bg-light" id="" (click)="navigatetodemopage()">
+                        
+                                            <div *ngFor="let item of filteredproducts" class="text-center">
+                        
+                                                <a [routerLink]="['/demo', item.id]">
+                                                    <div class="col-md-3 border card_body ">
+                                                        <div class="card_block">
+                        
+                                                            <div class="img_app">
+                                                                <img [src]="item.logo.value" 
+                                                                class="img-responsive">
+
+                                                               
+                                                            </div>
+                        
+                                                            <div class="card_content">
+                                                                <!-- <a [routerLink]="['/demo', item.id]"> -->
+                                                                <h5 class="card-title">{{item.name}}</h5>
+                                                                <!-- </a> -->
+                                                                <p class="card-text"> {{item.description}}</p> 
+                                                                <div class="arrow">
+                                                                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                                </div>
+                                                               
+                                                            </div>
+                        
+                                                            <!-- <div class="card_display">
+                                                                <h5 class="card_title_vis">{{ item.name }}</h5>
+                                                            </div> -->
+                                                            <!-- <b>
+                                                                    <u>Connect IT</u> -->
+                                                        </div>
+                        
+                                                    </div>
+                        
+                                                </a>
+                                                <!-- </b> -->
+                        
+                                            </div>
+                        
+                                            <div class="clearfix"></div>
+                                        </div>
+                        
+                                        <div class="clearfix"></div>
+                                    </div>
         </div>
+        
     </div>
 
 </div>
