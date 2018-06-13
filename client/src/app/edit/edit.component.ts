@@ -2,7 +2,7 @@ import { AuthService } from './../service/auth.service';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppStore } from './../models/AppStore';
 import { DataserviceService } from './../service/dataservice.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { Router ,ActivatedRoute} from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 
@@ -22,7 +22,7 @@ export class EditComponent implements OnInit {
   categoryproducts:any[]=[];
   Categories = ['Finance' , 'AI' , 'Telecom' ,
   'Block Chain' , 'eductaion' ,'gamification'];
-
+  displayMode=1;
   isActive:true;
    
   statusproducts:any[];
@@ -118,6 +118,14 @@ changeCheckbox(category:string) {
 
 navigatetodemopage(){
 	 this.router.navigate(['/demo']);
+}
+
+
+onDisplayModeChange(mode: number): void {
+
+  this.displayMode = mode;
+console.log( this.displayMode);
+
 }
 
   ngOnInit() {
