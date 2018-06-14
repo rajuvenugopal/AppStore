@@ -1,4 +1,5 @@
 package com.apps.AppStore.service;
+import java.io.IOException;
 import java.util.Collection;
 import java.util.HashSet;
 
@@ -14,6 +15,8 @@ import org.springframework.stereotype.Component;
 
 import com.apps.AppStore.pojo.UserDetail;
 import com.apps.AppStore.repository.UserDetailRepository;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
@@ -38,22 +41,26 @@ public class AuthenticationService implements UserDetailsService {
 		String logName=username;				
 		Bson bsonFilter = Filters.eq("username",logName);		
 		FindIterable<Document> findIt = collection.find(bsonFilter);		 
-		UserDetail userDetails;		
+		UserDetail userDetails = null;	
+		UserDetails user=null;
                for(Document document : findIt){
                    System.out.println(document);
                    
-                	   userDetails= mapper.readValue(document.toJson(), UserDetail.class);               
+                	   try {
+						userDetails= mapper.readValue(document.toJson(), UserDetail.class);
+					} catch (JsonParseException e1) {
+					} catch (JsonMappingException e1) {
+					} catch (IOException e1) {
+					}
+                	   
                        String loginUserName= userDetails.getUsername();     	
     	                    try {
-                                	if(username == null ||  username.isEmpty()){
-        		                    throw new UsernameNotFoundException("User not found");
-        	                    }
-        	
-                                  UserDetails user = userRepository.findByUsername(username);
-           // String name=((Object) user).getAuthentication();            
-           // Authentication auth = ((Object) user).getAuthentication();
-           // String name = auth.getName(); //get logged in username      		
-          //  model.addAttribute("username", name);            
+                                	if(username == null ||  username.isEmpty())
+                                      {
+        		                        throw new UsernameNotFoundException("User not found");
+        	                            }else {        	
+                                   user = userRepository.findByUsername(username);   
+        	                            }
            Collection<? extends GrantedAuthority> isAuthorities= user.getAuthorities();            
             if (user == null || isAuthorities==null ) {
             	throw new UsernameNotFoundException("User not found");
@@ -65,13 +72,11 @@ public class AuthenticationService implements UserDetailsService {
             //return new User(user.getAuthentication().getUsername(), user.getAuthentication().getPassword(), new HashSet<GrantedAuthority>());
         	} catch (Exception e) {
             throw new UsernameNotFoundException("User not found");
-        }        return null;
-
+        }         
+      }
+			return user;
+}
+    
+}
                
-                   }
-               }
-
-}
-}
-
     
