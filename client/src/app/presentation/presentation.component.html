@@ -1,11 +1,16 @@
-<div class="presentation" >
+<div class="center presentation" >
     
         <div class="row">
-    
-            <video controls autoplay preload="none" style="width:90vw; height: 90vh;">
+            
+            <a [routerLink]="['/demo', 1]">
+                <button class="btn btn-secondary" style="float: right;color: rgb(227, 25, 55)" >Go to AppStore <!--<i class="fa fa-close"></i>--></button>
+            </a>
+            
+            <video controls autoplay preload="none" style="width:80vw; height: 80vh; align-items: center">
                 <source src="./assets/Ideation.mp4" type="video/mp4" />
-                <p>Your browser does not support HTML5 Video.</p>
+                
             </video>
     
         </div>
     </div>
+    
