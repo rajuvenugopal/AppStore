@@ -27,19 +27,23 @@ repositories {
 	mavenCentral()
 }
 dependencies {
+	
+	
 	compile('org.springframework.boot:spring-boot-starter-data-mongodb')	
 	compile('org.springframework.boot:spring-boot-starter-web')				
 	compile('org.springframework.boot:spring-boot-starter-data-rest')		
 	compile('org.springframework.session:spring-session-core')
-	
+	compile('org.springframework.boot:spring-boot-starter-security')	
+	compile('org.springframework.boot:spring-boot-starter-tomcat')		
+	compile('org.springframework.security:spring-security-config')
+	compile('org.thymeleaf.extras:thymeleaf-extras-springsecurity4')	
+	compile('org.springframework.security:spring-security-core')
+	compile('org.springframework.security:spring-security-web')		
 	compile('org.glassfish.jersey.containers:jersey-container-servlet')
-	compile('javax.ws.rs:javax.ws.rs-api')
-	
-	
-	
-    compile ('org.codehaus.jackson:jackson-mapper-asl:1.9.13')
-    compile ('org.codehaus.jackson:jackson-core-asl:1.9.13')
-	
+	compile('javax.ws.rs:javax.ws.rs-api')	
+        compile ('org.glassfish.jersey.media:jersey-media-json-jackson:2.23')    
+        compile ('org.codehaus.jackson:jackson-mapper-asl:1.9.13')
+        compile ('org.codehaus.jackson:jackson-core-asl:1.9.13')	
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.springframework.security:spring-security-test')
 	
