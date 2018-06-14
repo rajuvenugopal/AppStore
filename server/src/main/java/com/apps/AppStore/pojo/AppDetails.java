@@ -18,11 +18,10 @@ import com.fasterxml.jackson.core.JsonParser;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "id",
-    "appCode",
+    //"appCode",
     "name",
     "description",
     "createdby",
-    "business",
     "categories",
     "dashboard",
     "industry",
@@ -48,10 +47,8 @@ public class AppDetails {
     private String description;
     @JsonProperty("createdby")
     private String createdby;
-    @JsonProperty("business")
-    private String business;
     @JsonProperty("categories")
-    private String categories;
+    private List<String> categories = null;
     @JsonProperty("dashboard")
     private String dashboard;   
 	@JsonProperty("industry")
@@ -145,23 +142,13 @@ public class AppDetails {
         this.createdby = createdby;
     }
 
-    @JsonProperty("business")
-    public String getBusiness() {
-        return business;
-    }
-
-    @JsonProperty("business")
-    public void setBusiness(String business) {
-        this.business = business;
-    }
-
     @JsonProperty("categories")
-    public String getCategories() {
+    public List<String>  getCategories() {
         return categories;
     }
 
     @JsonProperty("categories")
-    public void setCategories(String categories) {
+    public void setCategories(List<String> categories) {
         this.categories = categories;
     }
 
@@ -258,7 +245,7 @@ public class AppDetails {
 	@Override
 	public String toString() {
 		return "AppResponse [id=" + id + ", name=" + name + ", description=" + description + ", createdby=" + createdby
-				+ ", business=" + business + ", categories=" + categories + ", dashboard=" + dashboard + ", industry="
+				+ ", categories=" + categories + ", dashboard=" + dashboard + ", industry="
 				+ industry + ", tags=" + tags + ", marketingMaterial=" + marketingMaterial + ", logo=" + logo +  ","
 				+ ", inProduction=" + inProduction + ", _null=" + _null + ", version=" + version
 				+ ", additionalProperties=" + additionalProperties + "]";

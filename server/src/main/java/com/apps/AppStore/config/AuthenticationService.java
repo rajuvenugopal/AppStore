@@ -1,4 +1,4 @@
-package com.apps.AppStore.service;
+package com.apps.AppStore.config;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.HashSet;
