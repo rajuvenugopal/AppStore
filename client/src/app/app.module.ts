@@ -21,7 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { AddAppComponent } from './add-app/add-app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { AppCardComponent } from './app-card/app-card.component';
+//import { AppCardComponent } from './app-card/app-card.component';
 
 
 
@@ -36,8 +36,8 @@ import { AppCardComponent } from './app-card/app-card.component';
     AddAppComponent,
     AddProductComponent,
     NavbarComponent,
-    FooterComponent,
-    AppCardComponent
+    FooterComponent
+    //AppCardComponent
   
     
   ],
